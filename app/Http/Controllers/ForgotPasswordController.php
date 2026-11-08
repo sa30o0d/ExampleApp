@@ -25,7 +25,7 @@ class ForgotPasswordController extends Controller
         $response = response()->json([
             'message' => 'If an account exists for this email, a verification code is on its way.',
         ]);
-
+//
         $user = User::where('email', $request->email)->first();
 
         if (! $user) {
